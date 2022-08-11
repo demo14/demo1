@@ -26,7 +26,7 @@ public class AccountManagementController {
     }
 
     @ApiOperation(value = "Закрыть счет")
-    @DeleteMapping( "/{id}")
+    @DeleteMapping( "/account/{id}")
 	public ResponseEntity<Account> deleteAccount(@PathVariable("id") Long id){
         accountService.delete(id);
         return new ResponseEntity<>(HttpStatus.OK);
